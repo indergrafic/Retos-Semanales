@@ -17,16 +17,17 @@ frase = frase.lower()
 frase_sep = frase.split()
 
 espacios = 0
-for i in frase:
-	if i == ' ':
-		espacios +=1
-print('\nLa Frase tiene: ', (espacios) + 1, 'palabras.')
+
+print(f'\nLa Frase tiene: ', len(frase_sep), 'palabras.')
+print(frase_sep)
+print(frase)
 
 veces = 0
+i = 0
+for i in range(len(frase_sep)):
+	if frase_sep[i] in frase:
+		veces += 1
 
-for i in frase_sep:
-	if i in frase:
-		veces = 1
-		print(f'\n La palabra: {i} se repite {veces} vez')
-	else:
-		print(f'\n La palabra: {i} se repite {veces} vez')
+	print(f'\n La palabra: {frase_sep[i]} se repite {veces} vez')
+	
+	
